@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Marketing</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+
+	#head{
+		margin-top: -30px;
+
+	}
+	#heading{
+		font-family: ;
+		font-style: italic;
+		font-size: 25px;
+		color: brown;
+
+	}
+	#nav{
+		float: right;
+		position: relative;
+		top: -80px;
+		margin-right: 30px;
+		display: flex;
+		justify-content: flex-end;
+		grid-gap: 30px;
+		font-family: ;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: bolder;
+
+	}
+
+	img {
+		vertical-align: middle;
+		height: 400px;
+	}
+	.slideshow-container {
+		position: relative;
+		top: 30px;
+	   max-width: 1000px;
+	   position: relative;
+	   margin: auto;
+	}
+	.next{
+		position: relative;
+		right: 1%;
+	}
+	.prev, .next {
+	   cursor: pointer;
+	   position: absolute;
+	   top: 50%;
+	   width: auto;
+	   padding: 16px;
+	   margin-top: -22px;
+	   color: white;
+	   font-weight: bold;
+	   font-size: 40px;
+	   transition: 0.6s ease;
+	   border-radius: 0 3px 3px 0;
+	   user-select: none;
+	}
+	.prev:hover, .next:hover {
+	  background-color: rgba(0,0,0,0.8);
+	}
+
+	.text {
+	  color: #f2f2f2;
+	  font-size: 15px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	}
+	.dot {
+		position: relative;
+		top: 20px;
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+	  background-color: #717171;
+	}
+	.fade {
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+	a{
+		text-decoration: none;
+		color: white;
+	}
+	.link:hover a{
+		border-bottom:2px solid brown ;
+	}
+	#content{
+		text-align: center;
+		font-size: 20px;
+		font-style: italic;
+	}
+	#header{
+		background-color: pink;
+		color: white;
+	}
+	#section-content{
+		display: flex;
+		grid-gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#courses{
+		margin-top: -10px;
+		border-radius: 10px;
+		background-color: rgba(165,42,42, 0.5);
+		padding: 1px;
+		color: white;
+		width: 250px;
+		height: 380px;
+	}
+	#book_img{
+		margin-top: -10px;
+		width: 150px;
+		height: 200px;
+		border-radius: 10px;
+	}
+	#para{
+		display: none;
+	}
+	#but{
+		position: relative;
+		top: -20px;
+		width: 150px;
+		height: 30px;
+		color: green;
+		border: none;
+		background-color: white;
+		border-radius: 25px;
+		font-size: 18px;
+		font-style: italic;
+
+	}
+	#courses:hover #para{
+		padding: 10px;
+		display: block;
+	}
+	#courses:hover #courses_img{
+		display: none;
+
+	}
+	#image_scroller{
+		margin: auto;
+		width: 90%;
+	}
+	#testimonials{
+		padding: 10px;
+		width: 200px;
+		height: 350px;
+	}
+	@media(max-width: 950px){
+		body{
+			margin-left: 5px;
+		}
+		#heading{
+			width: 100%;
+			text-align: center;
+		}
+		.l1{
+			padding-top: 30px;
+		}
+		
+		#nav{
+			position: relative;
+			top: 1px;
+			margin-left: -10px;
+			width: 100%;
+			height: 100%;
+			background: rgba(165,42,42, 0.7);
+			padding-left: 20px;
+			display: flex;
+			flex-direction: column;
+			float: left;
+		}
+		img{
+			height: 200px;
+		}
+		.prev, .next,.text {
+			font-size: 30px;
+			margin-top: 80px;
+		}
+		.link{
+			margin-left: -20px;
+			border-bottom: 1px solid brown;
+			text-align: center;
+		}
+		.a{
+			color: white;
+			padding: 5px;
+		}
+		
+	}
+</style>
+
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="head">
+				<div id="heading"><h1 style="color: white;">AFFILIATE  MARKETING</h1></div>	
+			</div>		
+			<div id="nav">	
+				<div class="link l1" ><a href="#first" class="a"> Home <i class="fa fa-home" style="font-size: 20px; padding-left: 7px; color:black"></i></a></div>
+				<div class="link l2 "><a href="#third" class="a">Courses<i class="fa fa-book" style="font-size: 20px; padding-left: 7px; "></i></a></div>
+				<div class="link l2 "><a href="#forth" class="a">About Us<i class="fa fa-user" style="font-size: 20px; padding-left: 7px;color:blue;"></i></a></div>
+				<div class="link l3"><a href="#fifth" class="a">  Contact Us <i class="fa fa-phone" style="font-size: 20px; padding-left: 7px; color: green;"></i> </a></div>
+			</div>
+		</div>
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <img src="1.jpeg" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+			  <img src="2.jpeg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="3.jpeg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			  <img src="4.jpeg" style="width:100%">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+
+			</div>
+			<br>
+
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			  <span class="dot" onclick="currentSlide(4)"></span>  
+			</div>
+		</div>
+		<div id="content">
+			<section class="main-section">
+				<header id="header"><h1 id="first">Home</h1> </header>
+				<div id="section-cont">
+					<h3>What is Affiliate Marketing ? </h3>
+					<p>Affiliate marketing is an advertising model where a company pays compensation to third-party publishers to generate traffic or leads to the company’s products and services.</p>
+					<p>Simply put, affiliate marketing involves referring a product or service by sharing it on a blog, social media platforms, or website. The affiliate earns a commission each time someone makes a purchase through the unique link or code associated with their recommendation. Do it right, and this performance-based opportunity can be a source of additional income or help diversify the revenue streams of an existing business.</p>
+					<h3>How is affiliate marketing different from influencer marketing ?</h3>
+					<p>If an affiliate is redirecting customer traffic to a merchant’s website, doesn’t that qualify as influencer marketing? While there is indeed a natural overlap between affiliate marketing and influencer marketing, they are not necessarily the same. It is important to understand the differences between the two and how each of them works in order to maximise the revenue-generating opportunities offered by both.</p>
+					<p>Influencer marketing is a collaboration between brands and individuals who already have a sizable audience (or influencers), where the individuals are paid to endorse or promote the brand or its products/ services. It is a marketing strategy by which brands reach their target audience and try to ‘influence’ their purchasing behaviour.</p>
+					<p>With affiliate marketing, brands incentivise affiliates to promote their products/ services online by offering a commission for every sale they cause. i.e. the affiliate receives a commission if a visitor purchases the product from a link (or code) unique to the affiliate, published on their website or channel.</p>
+					<p>In influencer marketing, the number of followers, social media impressions, and interactions measure the ‘engagement’ that an influencer could generate. This is a key factor that determines the amount paid to the influencer based on their quote, whether or not the influencer activity actually leads to sales. Typically, influencers are paid a one-time fee, or a per post/content fee, for the activity.</p>
+				</div>
+			</section>
+			<section class="main-section">
+				<header id="header"><h1 id="third">Courses</h1> </header>
+				<div course_flex>
+					<h2 style="color:yellow; font-family: Lucida Handwriting;" ><img src="https://i.gifer.com/3mJF.gif" style="width:80px; height: 80px">UPTO 40% OFF</h2>
+					<div id="section-content">
+						<div id="courses">
+							<h4>Marketing Mastery</h4>
+							<div id="courses_img">
+								<img src="book1.jpeg" alt="Marketing Mastery" align="center" id="book_img">
+								<s><h5 style="color: yellow;">2,143 /-</h5></s>
+								<button id="but">1,499 /-</button>
+							</div>
+							<p id="para">Marketing Mastery is a comprehensive series of professional development seminars which can teach you how to understand and apply the techniques and theories of digital marketing.</p>
+
+						</div>
+						<div id="courses">
+							<h4>Branding Mastery</h4>
+							<div id="courses_img">
+								<img src="book2.jpeg" alt="Marketing Mastery" align="center" id="book_img">
+								<s><h5 style="color: yellow;">4,999 /-</h5></s>
+								<button id="but">3,499 /-</button>
+							</div>
+							<p id="para">Brand Mastery is an online course in strategic brand-building that teaches you arguably the smartest strategy for building and growing a profitable brand and business today. Most business problems can be traced back to one core problem; a weak brand.</p>
+
+						</div>
+						<div id="courses">
+							<h4>Traffic Mastery</h4>
+							<div id="courses_img">
+								<img src="book3.jpeg" alt="Marketing Mastery" align="center" id="book_img">
+								<s><h5 style="color: yellow;">8,999 /-</h5></s>
+								<button id="but">5,999 /-</button>
+							</div>
+							<p id="para">This course is your fast track to Online Traffic success and will provide long-lasting value from your very first traffic boost right through to advanced sales and marketing campaigns. Join now and you'll learn how to: Content Creation, SEO and Leveraging Analytics.</p>
+
+						</div>
+						<div id="courses">
+							<h4>Influence Mastery</h4>
+							<div id="courses_img">
+								<img src="book4.jpeg" alt="Marketing Mastery" align="center" id="book_img">
+								<s><h5 style="color: yellow;">15,999 /-</h5></s>
+								<button id="but">10,999 /-</button>
+							</div>
+							<p id="para">Selling, leadership, and even power are all a factor of influence. A person's ability to get their mes- sage across and persuade people is key to becoming more prominent and important in the work- place. This one-day program is for those who wish to do more than just communicate – it's for those who want to lead.</p>
+						</div>
+						<div id="courses">
+							<h4>Finance Mastery</h4>
+							<div id="courses_img">
+								<img src="book5.jpeg" alt="Marketing Mastery" align="center" id="book_img">
+								<s><h5 style="color: yellow;">19,999 /-</h5></s>
+								<button id="but">14,999 /-</button>
+							</div>
+							<p id="para">This course enlightens you about the comprehensive knowledge of financial affairs and how to get your hands-on financial planning and investment. The foremost aim is to imbibe the significance of money and how one can balance their expenditures.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-section">
+				<header id="header"><h1 id="forth">About Us</h1> </header>
+				<div id="about">
+					<div id="a1">
+						<h1 id="about_head" style="color: brown;">What does the Bizgurukal Affiliate Provide ?</h1>
+						<p>Bizgurukal provides specialised courses to help you build a well-settled career in terms of payment as a digital entrepreneur . It is also a platform that helps you earn from the courses as an affiliate marketer . </p>
+					</div>
+					<div id="a2">
+						<h1 id="about_head" style="color: brown;">What are the Application Criteria ? </h1>
+						<p>There are no criteria to apply with us . It does not requireany prior knowledge or any sort of Educational qualifications . You only need to have your mobile phone to know the details . </p>
+					</div>
+					<div id="a3">
+						<h1 id="about_head" style="color: brown;">What the benefits of our Ecosystem ?</h1>
+						<p>
+							<ol>
+								<li>Unlimited income . </li>
+								<li>Don't need to create products/brand . </li>
+								<li>Lesser investment . </li>
+								<li>Work from the comfort of your home . </li>
+								<li> 24*7 customer inflow 6. No targets or time limits to achieve . </li>
+								<li> Risk-free, recession-proof . </li>
+								<li> Can be done on your mobile phone . </li>
+							</ol>
+						</p>
+					</div>
+					<div id="a4">
+						<h1 id="about_head" style="color: brown;">Is it a Legal company ? </h1>
+						<p>Yes ! Bizgurukal is absolutely a legal company . You can registered govt. Website and searchfor the name of company . Look for it yourself . Follow the given three steps - </p>
+						<p>1 . Login <br>2 . Refer <br>3 . Earn</p>
+					</div>
+				</div>
+			</section>
+			<section class="main-section">
+				<header id="header">
+					<h1 id="fifth">Testimonials</h1>
+				</header>
+				<div id="image_scroller">
+					<marquee onmouseover="this.stop()" onmouseout="this.start()">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img1.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img2.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img3.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img4.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img5.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img6.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img7.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img8.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img9.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img10.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img11.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img12.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img13.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img15.jpeg" alt="image" id="testimonials">
+					<img src="C:\Users\T Charan\OneDrive\Desktop\hithesh\testimonials\img16.jpeg" alt="image" id="testimonials">
+				</marquee>
+				</div>
+			</section>
+			<section class="main-section">
+				<header id="header"><h1 id="sixth">Contact Us</h1> </header>
+				<div id="contact">
+					<div id="follow_icons">
+						<i class="fa fa-facebook" style="font-size:30px; padding-right: 10px; color: blue;"></i>
+						<i class="fa fa-instagram" style="font-size:30px; padding-right: 10px; color: pink;"></i>
+						<i class="fa fa-linkedin" style="font-size:30px; padding-right: 10px; color: lightskyblue;"></i>
+						<i class="fa fa-envelope" style="font-size:30px; padding-right: 10px; color: red;"></i>
+					</div>
+					<h6>&copy Copyrights 2022</h6>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
